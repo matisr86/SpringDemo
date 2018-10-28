@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+                pageEncoding="UTF-8"%>
 <%@ taglib prefix="s"  uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,9 +7,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
-    <title>Strona główna</title>
+    <title><s:message code="menu.mainPage"/></title>
 </head>
 <body>
-<h1>To jest strona główna</h1>
+<%@include file = "/WEB-INF/incl/menu.app" %>
 </body>
 </html>
