@@ -24,7 +24,7 @@ private BCryptPasswordEncoder bCryptPasswordEncoderl;
 
     @Override
     public User findUserByEmail(String email) {
-        return userReposiotory.findbyEmail(email);
+        return userReposiotory.findByEmail(email);
     }
 
     @Override
@@ -32,7 +32,7 @@ private BCryptPasswordEncoder bCryptPasswordEncoderl;
         user.setPassword(bCryptPasswordEncoderl.encode(user.getPassword()));
         user.setActive(1);
 
-        Role role = roleRepository.findByrole("ROLE_ADMIN") ;
+        Role role = roleRepository.findByRole("ROLE_USER") ;
         user.setRoles(new HashSet<Role>(Arrays.asList(role)));
 
         userReposiotory.save(user) ;

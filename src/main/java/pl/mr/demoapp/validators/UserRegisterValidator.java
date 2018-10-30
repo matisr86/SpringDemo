@@ -10,14 +10,14 @@ import pl.mr.demoapp.utilities.AppDemoUtils;
 public class UserRegisterValidator implements Validator {
 
 
-     @Override
+    @Override
     public boolean supports(Class<?> aClass) {
         return User.class.equals(aClass);
     }
 
     @Override
     public void validate(Object o, Errors errors) {
-         User u = (User) o ;
+        User u = (User) o ;
 
         ValidationUtils.rejectIfEmpty(errors,"name", "error.userName.empty");
         ValidationUtils.rejectIfEmpty(errors, "lastName", "error.userLastName.empty");
@@ -37,9 +37,11 @@ public class UserRegisterValidator implements Validator {
                 errors.rejectValue("password" , "error.userPasswordIsNotMatch");
             }
         }
+    }
 
-
-
-
+    public void validateEmailExist(User user, Errors errors) {
+         if (user != null){
+             errors.rejectValue("email" , "error.userEmailExist");
+         }
     }
 }

@@ -39,8 +39,8 @@ public class User {
     private Set<Role> roles ;
 
 
-    @Transient
     //hibernate nie bierze jej pod uwagę przy DB
+    @Transient
     private String operacja;
 
 
