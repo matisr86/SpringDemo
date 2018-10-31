@@ -43,6 +43,9 @@ public class User {
     @Transient
     private String operacja;
 
+    @Transient
+    private int nrRoli;
+
 
     //getter & setter
     public int getId() {
@@ -108,5 +111,13 @@ public class User {
 
     public void setOperacja(String operacja) {
         this.operacja = operacja;
+    }
+
+    public int getNrRoli() {
+        return nrRoli;
+    }
+
+    public void setNrRoli(int nrRoli) {
+        this.nrRoli = nrRoli;
     }
 }

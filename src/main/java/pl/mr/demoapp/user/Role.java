@@ -16,6 +16,8 @@ public class Role {
     @NotNull
     private String role ;
 
+
+
     public int getId() {
         return id;
     }
