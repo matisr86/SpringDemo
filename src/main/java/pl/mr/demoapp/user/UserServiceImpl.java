@@ -37,4 +37,12 @@ private BCryptPasswordEncoder bCryptPasswordEncoderl;
 
         userReposiotory.save(user) ;
     }
+
+    @Override
+    public void updateUserPassword(String newPassword, String email) {
+        userReposiotory.updateUserPassword(bCryptPasswordEncoderl.encode(newPassword), email);
+
+    }
+
+
 }

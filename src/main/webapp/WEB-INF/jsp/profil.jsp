@@ -18,7 +18,7 @@
 <table width="500" border="0" cellspacing="1" cellpadding="4" align="center">
     <tr>
         <td width="130" align="right">
-            <s:message code="register.email"/> 
+            <s:message code="register.email"/>
         </td>
         <td width="270" align="left">
             <c:out value="${user.email}"/>
@@ -63,6 +63,16 @@
             </c:choose>
         </td>
     </tr>
+</table>
+
+<table width="500" border="0" cellpadding="4" cellspacing="1" align="center">
+    <tr>
+        <td align="center">
+
+        <input type="button" value="<s:message code="button.zmianaHasla"/>" onclick="window.location.href='${pageContext.request.contextPath}/editpassword'"/>
+        </td>
+    </tr>
+
 </table>
 </body>
 </html>
